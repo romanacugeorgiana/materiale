@@ -2,7 +2,131 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Română cu Georgiana</title>
+<style>
+:root{--bg:#f4f1eb;--a:#e94560;--b:#0f3460;--gn:#27ae60;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:28px 16px 60px;}
+header{text-align:center;margin-bottom:36px;}
+.logo{font-size:2.6rem;margin-bottom:6px;}
+h1{font-size:1.55rem;color:var(--b);font-weight:800;margin-bottom:4px;}
+.tagline{font-size:.88rem;color:#888;}
+.grid{display:flex;flex-direction:column;gap:14px;width:100%;max-width:480px;}
+a.card{display:block;text-decoration:none;background:#fff;border-radius:18px;padding:20px 20px 18px;box-shadow:0 4px 18px rgba(0,0,0,.09);border:2px solid transparent;transition:border-color .15s,transform .12s;}
+a.card:hover,a.card:focus{border-color:var(--b);transform:translateY(-2px);outline:none;}
+a.card:active{transform:scale(.98);}
+.card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px;}
+.titles{flex:1;}
+.ro{font-size:1.12rem;font-weight:800;color:var(--b);line-height:1.2;margin-bottom:2px;}
+.en{font-size:.82rem;color:#888;font-style:italic;}
+.badge{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:4px 9px;border-radius:999px;white-space:nowrap;flex-shrink:0;margin-top:2px;}
+.badge-fc{background:#e8f0fe;color:#1a5adb;}
+.badge-mc{background:#fde8ec;color:#c0143c;}
+.badge-int{background:#e6f9ee;color:#1a6e3c;}
+.desc{font-size:.8rem;color:#555;line-height:1.55;}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
+.chip{font-size:.68rem;background:#f0eee8;color:#666;padding:3px 9px;border-radius:999px;font-weight:600;}
+footer{margin-top:44px;font-size:.75rem;color:#bbb;text-align:center;}
+</style>
 </head>
+<body>
+
+<header>
+  <div class="logo">&#127479;&#127476;</div>
+  <h1>Română cu Georgiana</h1>
+  <p class="tagline">Romanian learning exercises &mdash; click a lesson to begin</p>
+</header>
+
+<div class="grid">
+
+  <a class="card" href="exercitii/corpul.html">
+    <div class="card-header">
+      <div class="titles">
+        <div class="ro">Corpul Uman</div>
+        <div class="en">The Human Body</div>
+      </div>
+      <span class="badge badge-int">&#128270; Interactive</span>
+    </div>
+    <p class="desc">Explorează corpul uman interactiv &mdash; atinge orice parte pentru a vedea numele ei. / Explore the human body interactively &mdash; tap any part to reveal its name.</p>
+    <div class="chips">
+      <span class="chip">32 cuvinte / words</span>
+      <span class="chip">Vocabular / Vocabulary</span>
+      <span class="chip">Anatomie / Anatomy</span>
+    </div>
+  </a>
+
+  <a class="card" href="exercitii/flashcards-1.html">
+    <div class="card-header">
+      <div class="titles">
+        <div class="ro">Vocabular Esențial &mdash; Vol. 1</div>
+        <div class="en">Core Vocabulary &mdash; Vol. 1</div>
+      </div>
+      <span class="badge badge-fc">&#127183; Flashcards</span>
+    </div>
+    <p class="desc">Flashcard-uri și exerciții cu alegere multiplă pentru vocabularul de bază. / Flashcards and multiple-choice exercises for essential everyday vocabulary.</p>
+    <div class="chips">
+      <span class="chip">142 cuvinte / words</span>
+      <span class="chip">Verbe</span>
+      <span class="chip">Oameni / People</span>
+      <span class="chip">Casă / Home</span>
+      <span class="chip">Mâncare / Food</span>
+    </div>
+  </a>
+
+  <a class="card" href="exercitii/flashcards-2.html">
+    <div class="card-header">
+      <div class="titles">
+        <div class="ro">Vocabular Esențial &mdash; Vol. 2</div>
+        <div class="en">Core Vocabulary &mdash; Vol. 2</div>
+      </div>
+      <span class="badge badge-fc">&#127183; Flashcards</span>
+    </div>
+    <p class="desc">Al doilea volum de flashcard-uri, cu substantive, adjective și adverbe. / Second volume of flashcards, covering nouns, adjectives and adverbs.</p>
+    <div class="chips">
+      <span class="chip">200 cuvinte / words</span>
+      <span class="chip">Substantive / Nouns</span>
+      <span class="chip">Adjective</span>
+      <span class="chip">Adverbe / Adverbs</span>
+    </div>
+  </a>
+
+  <a class="card" href="exercitii/plurale.html">
+    <div class="card-header">
+      <div class="titles">
+        <div class="ro">Pluralele</div>
+        <div class="en">Romanian Plurals</div>
+      </div>
+      <span class="badge badge-mc">&#10067; Multiple Choice</span>
+    </div>
+    <p class="desc">Exersează formele de plural ale substantivelor românești cu flashcard-uri și alegere multiplă. / Practise Romanian noun plural forms with flashcards and multiple-choice questions.</p>
+    <div class="chips">
+      <span class="chip">200 cuvinte / words</span>
+      <span class="chip">Masculin / Masculine</span>
+      <span class="chip">Feminin / Feminine</span>
+      <span class="chip">Neutru / Neuter</span>
+    </div>
+  </a>
+
+  <a class="card" href="exercitii/verbe-conjugari.html">
+    <div class="card-header">
+      <div class="titles">
+        <div class="ro">Verbele. Conjugările</div>
+        <div class="en">Verbs &amp; Conjugations</div>
+      </div>
+      <span class="badge badge-mc">&#10067; Multiple Choice</span>
+    </div>
+    <p class="desc">300 de exerciții despre conjugarea verbelor românești &mdash; toate cele 11 conjugări la prezent. / 300 exercises on Romanian verb conjugation &mdash; all 11 conjugation patterns in the present tense.</p>
+    <div class="chips">
+      <span class="chip">300 exerciții / exercises</span>
+      <span class="chip">Toate 11 conjugări / All 11 patterns</span>
+      <span class="chip">Vocabular / Vocabulary</span>
+    </div>
+  </a>
+
+</div>
+
+<footer>Română cu Georgiana &nbsp;&bull;&nbsp; All exercises are password protected.</footer>
+
+</body>
 </html>
