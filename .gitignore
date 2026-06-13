@@ -1,0 +1,7 @@
+src/
+build.sh
+.DS_Store
+node_modules/
+README.md
+.staticrypt.json
+.claude
