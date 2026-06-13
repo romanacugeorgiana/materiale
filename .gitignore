@@ -5,3 +5,5 @@ node_modules/
 README.md
 .staticrypt.json
 .claude
+docs/
+CLAUDE.md
