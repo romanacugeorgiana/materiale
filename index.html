@@ -4,189 +4,253 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Română cu Georgiana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f4f1eb;--a:#e94560;--b:#0f3460;--gn:#27ae60;}
+:root{
+  --bg:#F2F4F7;
+  --card:#FFFFFF;
+  --navy:#1A2E48;
+  --gold:#C9A84C;
+  --dim:#6B7A8D;
+  --border:#E4E8EF;
+  --shadow:0 1px 3px rgba(26,46,72,.06),0 4px 16px rgba(26,46,72,.07);
+}
 *{box-sizing:border-box;margin:0;padding:0;}
-html,body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:28px 16px 60px;}
-header{text-align:center;margin-bottom:36px;}
-.logo{font-size:2.6rem;margin-bottom:6px;}
-h1{font-size:1.55rem;color:var(--b);font-weight:800;margin-bottom:4px;}
-.tagline{font-size:.88rem;color:#888;}
-.grid{display:flex;flex-direction:column;gap:14px;width:100%;max-width:480px;}
-a.card{display:block;text-decoration:none;background:#fff;border-radius:18px;padding:20px 20px 18px;box-shadow:0 4px 18px rgba(0,0,0,.09);border:2px solid transparent;transition:border-color .15s,transform .12s;}
-a.card:hover,a.card:focus{border-color:var(--b);transform:translateY(-2px);outline:none;}
-a.card:active{transform:scale(.98);}
-.card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px;}
+html,body{
+  font-family:'DM Sans',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--navy);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:52px 16px 80px;
+}
+header{text-align:center;margin-bottom:44px;}
+.brand{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(1.9rem,6vw,2.5rem);
+  font-weight:600;
+  color:var(--navy);
+  letter-spacing:.02em;
+  line-height:1.1;
+  margin-bottom:8px;
+}
+.brand em{font-style:italic;color:var(--gold);}
+.tagline{font-size:.75rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;}
+.grid{display:flex;flex-direction:column;gap:10px;width:100%;max-width:480px;}
+a.card{
+  display:block;
+  text-decoration:none;
+  background:var(--card);
+  border-radius:12px;
+  padding:18px 20px 16px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+  transition:border-color .15s,box-shadow .15s;
+}
+a.card:hover,a.card:focus{
+  border-color:#b0bcd4;
+  box-shadow:0 2px 6px rgba(26,46,72,.08),0 8px 28px rgba(26,46,72,.12);
+  outline:none;
+}
+a.card:active{opacity:.9;}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px;}
 .titles{flex:1;}
-.ro{font-size:1.12rem;font-weight:800;color:var(--b);line-height:1.2;margin-bottom:2px;}
-.en{font-size:.82rem;color:#888;font-style:italic;}
-.badge{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:4px 9px;border-radius:999px;white-space:nowrap;flex-shrink:0;margin-top:2px;}
-.badge-fc{background:#e8f0fe;color:#1a5adb;}
-.badge-mc{background:#fde8ec;color:#c0143c;}
-.badge-int{background:#e6f9ee;color:#1a6e3c;}
-.desc{font-size:.8rem;color:#555;line-height:1.55;}
-.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
-.chip{font-size:.68rem;background:#f0eee8;color:#666;padding:3px 9px;border-radius:999px;font-weight:600;}
-footer{margin-top:44px;font-size:.75rem;color:#bbb;text-align:center;}
+.ro{font-size:1rem;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:2px;}
+.en{font-size:.78rem;color:var(--dim);font-style:italic;}
+.tag{
+  font-size:.6rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  color:var(--dim);
+  white-space:nowrap;
+  flex-shrink:0;
+  margin-top:3px;
+  padding:3px 8px;
+  border:1px solid var(--border);
+  border-radius:999px;
+}
+.desc{font-size:.78rem;color:var(--dim);line-height:1.6;}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;}
+.chip{font-size:.63rem;color:#8a96a5;padding:2px 7px;border-radius:999px;border:1px solid var(--border);font-weight:500;}
+footer{margin-top:52px;font-size:.7rem;color:#aab;text-align:center;letter-spacing:.05em;}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo"></div>
-  <h1>Română cu Georgiana</h1>
-  <p class="tagline">Romanian learning exercises &mdash; click a lesson to begin</p>
+  <div class="brand">Română cu <em>Georgiana</em></div>
+  <p class="tagline">Romanian exercises &mdash; select a lesson</p>
 </header>
 
 <div class="grid">
 
   <a class="card" href="exercitii/corpul.html">
-    <div class="card-header">
+    <div class="card-top">
       <div class="titles">
         <div class="ro">Corpul Uman</div>
         <div class="en">The Human Body</div>
       </div>
-      <span class="badge badge-int">&#128270; Interactive</span>
+      <span class="tag">Interactive</span>
     </div>
-    <p class="desc">Explorează corpul uman interactiv &mdash; atinge orice parte pentru a vedea numele ei. / Explore the human body interactively &mdash; tap any part to reveal its name.</p>
+    <p class="desc">Explorează corpul uman interactiv &mdash; atinge orice parte pentru a vedea numele ei. / Tap any part to reveal its name.</p>
     <div class="chips">
-      <span class="chip">32 cuvinte / words</span>
-      <span class="chip">Vocabular / Vocabulary</span>
-      <span class="chip">Anatomie / Anatomy</span>
+      <span class="chip">32 cuvinte</span>
+      <span class="chip">Vocabular</span>
+      <span class="chip">Anatomie</span>
     </div>
   </a>
 
   <a class="card" href="exercitii/animale.html">
-    <div class="card-header">
+    <div class="card-top">
       <div class="titles">
         <div class="ro">Animale</div>
         <div class="en">Animals</div>
       </div>
-      <span class="badge badge-int">&#128270; Interactive</span>
+      <span class="tag">Interactive</span>
     </div>
-    <p class="desc">Descoperă lumea animală în română &mdash; atinge fiecare animal pentru a afla numele lui. / Explore the animal world in Romanian &mdash; tap each animal to learn its name.</p>
+    <p class="desc">Descoperă lumea animală în română &mdash; atinge fiecare animal pentru a afla numele lui. / Tap each animal to learn its name.</p>
     <div class="chips">
-      <span class="chip">Vocabular / Vocabulary</span>
-      <span class="chip">Animale / Animals</span>
+      <span class="chip">Vocabular</span>
+      <span class="chip">Animale</span>
     </div>
   </a>
 
   <a class="card" href="exercitii/familia.html">
-    <div class="card-header">
+    <div class="card-top">
       <div class="titles">
         <div class="ro">Familia</div>
         <div class="en">The Family</div>
       </div>
-      <span class="badge badge-int">&#128270; Interactive</span>
+      <span class="tag">Interactive</span>
     </div>
-    <p class="desc">Învață membrii familiei în română &mdash; atinge fiecare personaj pentru a vedea relația de rudenie. / Learn family members in Romanian &mdash; tap each character to see the family relationship.</p>
+    <p class="desc">Învață membrii familiei în română &mdash; atinge fiecare personaj pentru a vedea relația de rudenie. / Tap each character to see the family relationship.</p>
     <div class="chips">
-      <span class="chip">Vocabular / Vocabulary</span>
-      <span class="chip">Familie / Family</span>
+      <span class="chip">Vocabular</span>
+      <span class="chip">Familie</span>
     </div>
   </a>
 
   <a class="card" href="exercitii/flashcards-1.html">
-    <div class="card-header">
+    <div class="card-top">
       <div class="titles">
         <div class="ro">Vocabular &mdash; Vol. 1</div>
         <div class="en">Core Vocabulary &mdash; Vol. 1</div>
       </div>
-      <span class="badge badge-fc">&#127183; Flashcards</span>
+      <span class="tag">Flashcards</span>
     </div>
     <p class="desc">Flashcarduri și exerciții cu alegere multiplă de vocabular. / Flashcards and multiple-choice exercises for essential everyday vocabulary.</p>
     <div class="chips">
-      <span class="chip">142 cuvinte / words</span>
+      <span class="chip">142 cuvinte</span>
       <span class="chip">Verbe</span>
-      <span class="chip">Oameni / People</span>
-      <span class="chip">Casă / Home</span>
-      <span class="chip">Mâncare / Food</span>
+      <span class="chip">Oameni</span>
+      <span class="chip">Casă</span>
+      <span class="chip">Mâncare</span>
     </div>
   </a>
 
   <a class="card" href="exercitii/flashcards-2.html">
-    <div class="card-header">
+    <div class="card-top">
       <div class="titles">
         <div class="ro">Vocabular Esențial &mdash; Vol. 2</div>
         <div class="en">Core Vocabulary &mdash; Vol. 2</div>
       </div>
-      <span class="badge badge-fc">&#127183; Flashcards</span>
+      <span class="tag">Flashcards</span>
     </div>
-    <p class="desc">Flashcarduri, cu substantive, adjective și adverbe. / Flashcards, covering nouns, adjectives and adverbs.</p>
+    <p class="desc">Flashcarduri cu substantive, adjective și adverbe. / Flashcards covering nouns, adjectives and adverbs.</p>
     <div class="chips">
-      <span class="chip">200 cuvinte / words</span>
-      <span class="chip">Substantive / Nouns</span>
+      <span class="chip">200 cuvinte</span>
+      <span class="chip">Substantive</span>
       <span class="chip">Adjective</span>
-      <span class="chip">Adverbe / Adverbs</span>
+      <span class="chip">Adverbe</span>
     </div>
   </a>
 
   <a class="card" href="exercitii/plurale.html">
-    <div class="card-header">
+    <div class="card-top">
       <div class="titles">
         <div class="ro">Pluralele</div>
         <div class="en">Romanian Plurals</div>
       </div>
-      <span class="badge badge-mc">&#10067; Multiple Choice</span>
+      <span class="tag">Multiple Choice</span>
     </div>
     <p class="desc">Exersează formele de plural ale substantivelor românești cu flashcard-uri și alegere multiplă. / Practise Romanian noun plural forms with flashcards and multiple-choice questions.</p>
     <div class="chips">
-      <span class="chip">200 cuvinte / words</span>
-      <span class="chip">Masculin / Masculine</span>
-      <span class="chip">Feminin / Feminine</span>
-      <span class="chip">Neutru / Neuter</span>
+      <span class="chip">200 cuvinte</span>
+      <span class="chip">Masculin</span>
+      <span class="chip">Feminin</span>
+      <span class="chip">Neutru</span>
+    </div>
+  </a>
+
+  <a class="card" href="exercitii/verbe-populare.html">
+    <div class="card-top">
+      <div class="titles">
+        <div class="ro">12 Verbe Esențiale</div>
+        <div class="en">12 Essential Verbs</div>
+      </div>
+      <span class="tag">Multiple Choice</span>
+    </div>
+    <p class="desc">Cele mai importante 12 verbe românești — exerciții de conjugare la toate persoanele. / The 12 most important Romanian verbs practised across all persons and numbers.</p>
+    <div class="chips">
+      <span class="chip">12 verbe</span>
+      <span class="chip">Conjugări</span>
+      <span class="chip">Prezent</span>
     </div>
   </a>
 
   <a class="card" href="exercitii/conjugari.html">
-    <div class="card-header">
+    <div class="card-top">
       <div class="titles">
         <div class="ro">Verbe la prezent</div>
         <div class="en">Verbs in the Present Tense</div>
       </div>
-      <span class="badge badge-mc">&#10067; Multiple Choice</span>
+      <span class="tag">Multiple Choice</span>
     </div>
     <p class="desc">500 de exerciții cu alegere multiplă — timpul prezent. / 500 multiple-choice exercises focused on present-tense verb conjugation.</p>
     <div class="chips">
-      <span class="chip">500 exerciții / exercises</span>
-      <span class="chip">Prezent / Present tense</span>
-      <span class="chip">Verbe / Verbs</span>
+      <span class="chip">500 exerciții</span>
+      <span class="chip">Prezent</span>
+      <span class="chip">Verbe</span>
     </div>
   </a>
 
   <a class="card" href="exercitii/test-nivel.html">
-    <div class="card-header">
+    <div class="card-top">
       <div class="titles">
         <div class="ro">Test de Nivel</div>
         <div class="en">Level Test</div>
       </div>
-      <span class="badge badge-int">&#128270; Interactive</span>
+      <span class="tag">Interactive</span>
     </div>
     <p class="desc">Testează-ți nivelul de română printr-un exercițiu interactiv. / Test your Romanian level with an interactive exercise.</p>
     <div class="chips">
-      <span class="chip">Nivel / Level</span>
-      <span class="chip">Evaluare / Assessment</span>
+      <span class="chip">Nivel 1</span>
+      <span class="chip">Evaluare</span>
     </div>
   </a>
 
   <a class="card" href="exercitii/test-nivel2.html">
-    <div class="card-header">
+    <div class="card-top">
       <div class="titles">
-        <div class="ro">Test de Evaluare — Nivel 2</div>
-        <div class="en">Level Test — Level 2</div>
+        <div class="ro">Test de Evaluare &mdash; Nivel 2</div>
+        <div class="en">Level Test &mdash; Level 2</div>
       </div>
-      <span class="badge badge-int">&#128270; Interactive</span>
+      <span class="tag">Interactive</span>
     </div>
     <p class="desc">Recapitulare și evaluare pentru Nivel 2. / Revision and assessment for Level 2.</p>
     <div class="chips">
-      <span class="chip">Nivel 2 / Level 2</span>
-      <span class="chip">Evaluare / Assessment</span>
+      <span class="chip">Nivel 2</span>
+      <span class="chip">Evaluare</span>
     </div>
   </a>
 
 </div>
 
-<footer>Română cu Georgiana &nbsp;&bull;&nbsp; All exercises are password protected.</footer>
+<footer>Română cu Georgiana &nbsp;&middot;&nbsp; All exercises are password protected.</footer>
 
 </body>
 </html>
