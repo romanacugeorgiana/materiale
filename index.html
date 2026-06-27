@@ -25,9 +25,9 @@ html,body{
   display:flex;
   flex-direction:column;
   align-items:center;
-  padding:52px 16px 80px;
+  padding:44px 20px 72px;
 }
-header{text-align:center;margin-bottom:44px;}
+header{text-align:center;margin-bottom:32px;}
 .brand{
   font-family:'Cormorant Garamond',Georgia,serif;
   font-size:clamp(1.9rem,6vw,2.5rem);
@@ -39,13 +39,16 @@ header{text-align:center;margin-bottom:44px;}
 }
 .brand em{font-style:italic;color:var(--gold);}
 .tagline{font-size:.75rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;}
-.grid{display:flex;flex-direction:column;gap:10px;width:100%;max-width:480px;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;max-width:860px;}
+@media(max-width:620px){.grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:380px){.grid{grid-template-columns:1fr;}}
 a.card{
-  display:block;
+  display:flex;
+  flex-direction:column;
   text-decoration:none;
   background:var(--card);
   border-radius:12px;
-  padding:18px 20px 16px;
+  padding:14px 16px 12px;
   box-shadow:var(--shadow);
   border:1px solid var(--border);
   transition:border-color .15s,box-shadow .15s;
@@ -56,27 +59,27 @@ a.card:hover,a.card:focus{
   outline:none;
 }
 a.card:active{opacity:.9;}
-.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px;}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:5px;}
 .titles{flex:1;}
-.ro{font-size:1rem;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:2px;}
-.en{font-size:.78rem;color:var(--dim);font-style:italic;}
+.ro{font-size:.9rem;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:2px;}
+.en{font-size:.72rem;color:var(--dim);font-style:italic;}
 .tag{
-  font-size:.6rem;
+  font-size:.55rem;
   font-weight:600;
   text-transform:uppercase;
   letter-spacing:.07em;
   color:var(--dim);
   white-space:nowrap;
   flex-shrink:0;
-  margin-top:3px;
-  padding:3px 8px;
+  margin-top:2px;
+  padding:2px 7px;
   border:1px solid var(--border);
   border-radius:999px;
 }
-.desc{font-size:.78rem;color:var(--dim);line-height:1.6;}
-.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;}
-.chip{font-size:.63rem;color:#8a96a5;padding:2px 7px;border-radius:999px;border:1px solid var(--border);font-weight:500;}
-footer{margin-top:52px;font-size:.7rem;color:#aab;text-align:center;letter-spacing:.05em;}
+.desc{font-size:.72rem;color:var(--dim);line-height:1.55;flex:1;}
+.chips{display:flex;flex-wrap:wrap;gap:3px;margin-top:7px;}
+.chip{font-size:.58rem;color:#8a96a5;padding:2px 6px;border-radius:999px;border:1px solid var(--border);font-weight:500;}
+footer{margin-top:44px;font-size:.7rem;color:#aab;text-align:center;letter-spacing:.05em;}
 </style>
 </head>
 <body>
@@ -246,6 +249,22 @@ footer{margin-top:52px;font-size:.7rem;color:#aab;text-align:center;letter-spaci
     <div class="chips">
       <span class="chip">Nivel 1</span>
       <span class="chip">Evaluare</span>
+    </div>
+  </a>
+
+  <a class="card" href="exercitii/placea.html">
+    <div class="card-top">
+      <div class="titles">
+        <div class="ro">Îmi place! &mdash; A Plăcea</div>
+        <div class="en">I Like! &mdash; The Verb A Plăcea</div>
+      </div>
+      <span class="tag">Interactive</span>
+    </div>
+    <p class="desc">Învață să exprimi ce îți place &mdash; mâncare, animale, culori, anotimpuri și activități, cu <em>place</em> sau <em>plac</em>. / Learn to express what you like with 6 interactive activities.</p>
+    <div class="chips">
+      <span class="chip">a plăcea</span>
+      <span class="chip">place / plac</span>
+      <span class="chip">6 activități</span>
     </div>
   </a>
 
